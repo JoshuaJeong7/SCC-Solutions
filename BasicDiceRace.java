@@ -79,6 +79,21 @@ public class BasicDiceRace {
         ///VERY IMPORTANT!!!! START BY WRITING THE LOOP ITSELF!!!!
         while (gameIsRunning) {
                 
+                for (int i = 0; i <= raceLength; i++) {
+                    if (i == yourSteps)
+                        System.out.print("@");
+                    else if (i == backwardsStep1 || 
+                            i == backwardsStep2 || 
+                            i == backwardsStep3 || 
+                            i == backwardsStep4 || 
+                            i == backwardsStep5) {
+                        System.out.print("X");
+                    }
+                    else if (i == raceLength)
+                        System.out.print("F");
+                    else
+                        System.out.print("-");
+                }
                 System.out.println(" \n \n ");
                 /**
                  * CRITERIA OF WHAT TO DO IN ONE     :
@@ -147,13 +162,13 @@ public class BasicDiceRace {
                     System.out.println("Landed on a backwards tile! Moving backwards");
                         
                 }
-                    
+                System.out.println("Press enter to continue");
+                input.nextLine();
                 
-                /// 5) Print the results of the player's     
+                /// 5) Print the results of the player's turn
                 // TYPE YOUR CODE HERE
                 //(The students may type everything below)
                 numTurns ++;
-                System.out.println("     " + numTurns );
                 System.out.println("Player's position: " + yourSteps);
                 
             
@@ -167,4 +182,3 @@ public class BasicDiceRace {
     }
     
 }
-
