@@ -16,6 +16,12 @@ public class TwentyElementList {
   // through sequential search, checking each element to see if "gold" exists. Good luck!
   public static boolean isGoldInList(ElementList root) {
     //Finish the code here!
+    while (root != null) {
+        if (root.message.equalsIgnoreCase("gold")) {
+            return true;
+        }
+        root = root.next;
+    }
     
     return false;
   }
